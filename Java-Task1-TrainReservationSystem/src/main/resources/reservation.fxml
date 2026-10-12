@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0"
+            prefWidth="1365.0"
+            stylesheets="@style.css"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ReservationController">
+
+    <children>
+<ScrollPane fx:id="reservationScrollPane"
+            fitToWidth="true"
+            fitToHeight="false"
+            hbarPolicy="NEVER"
+            vbarPolicy="AS_NEEDED"
+            AnchorPane.topAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0">
+<content>
+    <StackPane fx:id="reservationPageStackPane"
+           alignment="TOP_CENTER"
+           minHeight="1200.0">
+    
+        <children>
+
+            <!-- BACKGROUND: behind the complete reservation page -->
+            
+<ImageView fx:id="backgroundImageView"
+           fitWidth="1365.0"
+           fitHeight="1200.0"
+           preserveRatio="false"
+           smooth="true"
+           mouseTransparent="true"
+           managed="false">
+    <image>
+        <Image url="@images/Background.png"/>
+    </image>
+</ImageView>
+
+
+            <!-- EXISTING PAGE CONTENT -->
+            <VBox alignment="TOP_CENTER"
+                  spacing="18.0"
+                  minHeight="1200.0"
+                  style="-fx-background-color: transparent;">
+
+                <padding>
+                    <Insets top="25.0"
+                            bottom="25.0"
+                            left="20.0"
+                            right="20.0"/>
+                </padding>
+
+                <children>
+
+                    <!-- LOGO -->
+                    <StackPane styleClass="logo-circle"
+                               prefWidth="70.0"
+                               prefHeight="70.0"
+                               maxWidth="70.0"
+                               maxHeight="70.0">
+                        <children>
+                            <Label text="🚆"
+                                   style="-fx-font-size: 32px;"/>
+                        </children>
+                    </StackPane>
+
+                    <!-- TITLE -->
+                    <Label text="Railway Reservation"
+                           styleClass="main-title">
+                        <font>
+                            <Font name="System Bold" size="30.0"/>
+                        </font>
+                    </Label>
+
+                    <Label text="Book your journey with ease"
+                           styleClass="subtitle">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Label>
+
+                    <!-- RESERVATION CARD -->
+                    <VBox alignment="CENTER_LEFT"
+                          spacing="15.0"
+                          maxWidth="600.0"
+                          prefWidth="600.0"
+                          styleClass="login-card">
+
+                        <padding>
+                            <Insets top="25.0"
+                                    bottom="25.0"
+                                    left="30.0"
+                                    right="30.0"/>
+                        </padding>
+
+                        <Label text="Passenger Details"
+                               styleClass="card-title">
+                            <font>
+                                <Font name="System Bold" size="22.0"/>
+                            </font>
+                        </Label>
+
+                        <Label text="Passenger Name" styleClass="field-title"/>
+                        <TextField fx:id="passengerNameField"
+                                   promptText="Enter passenger name"
+                                   styleClass="text-field-custom"
+                                   prefHeight="40.0"
+                                   maxWidth="Infinity"/>
+
+                        <Label text="Train Number" styleClass="field-title"/>
+                        <TextField fx:id="trainNumberField"
+                                   promptText="Enter train number"
+                                   styleClass="text-field-custom"
+                                   prefHeight="40.0"
+                                   maxWidth="Infinity"/>
+
+                        <Label text="Train Name" styleClass="field-title"/>
+                        <TextField fx:id="trainNameField"
+                                   promptText="Train name"
+                                   editable="false"
+                                   styleClass="text-field-custom"
+                                   prefHeight="40.0"
+                                   maxWidth="Infinity"/>
+
+                        <Label text="Travel Class" styleClass="field-title"/>
+                        <ComboBox fx:id="classComboBox"
+                                  promptText="Select travel class"
+                                  prefHeight="40.0"
+                                  maxWidth="Infinity"
+                                  styleClass="text-field-custom"/>
+
+                        <Label text="Journey Date" styleClass="field-title"/>
+                        <DatePicker fx:id="journeyDatePicker"
+                                    promptText="Select journey date"
+                                    prefHeight="40.0"
+                                    maxWidth="Infinity"
+                                    styleClass="text-field-custom"/>
+
+                        <Label text="Source" styleClass="field-title"/>
+                        <TextField fx:id="sourceField"
+                                   promptText="Enter source station"
+                                   styleClass="text-field-custom"
+                                   prefHeight="40.0"
+                                   maxWidth="Infinity"/>
+
+                        <Label text="Destination" styleClass="field-title"/>
+                        <TextField fx:id="destinationField"
+                                   promptText="Enter destination station"
+                                   styleClass="text-field-custom"
+                                   prefHeight="40.0"
+                                   maxWidth="Infinity"/>
+
+                        <Button fx:id="bookTicketButton"
+                                text="Book Ticket"
+                                onAction="#bookTicket"
+                                prefHeight="45.0"
+                                maxWidth="Infinity"
+                                styleClass="signin-button"/>
+
+                        <Separator/>
+
+                        <Button fx:id="backButton"
+                                text="Back to Dashboard"
+                                onAction="#goBack"
+                                prefHeight="40.0"
+                                maxWidth="Infinity"
+                                styleClass="back-button"/>
+                    </VBox>
+
+                    <!-- FOOTER -->
+                    <Label text="Travel safely. Thank you for choosing us!"
+                           styleClass="footer-text">
+                        <font>
+                            <Font size="12.0"/>
+                        </font>
+                    </Label>
+
+                </children>
+            </VBox>
+
+        </children>
+    </StackPane>
+</content>
+        </ScrollPane>
+
+    </children>
+
+</AnchorPane>

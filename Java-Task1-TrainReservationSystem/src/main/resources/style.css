@@ -1,0 +1,100 @@
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.main-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17365D;
+}
+
+.subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #40566F;
+}
+
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.96);
+    -fx-background-radius: 16px;
+    -fx-border-color: #D7E2EF;
+    -fx-border-radius: 16px;
+}
+
+.card-title {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #17365D;
+}
+
+.field-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #30445B;
+}
+
+.text-field-custom {
+    -fx-background-color: #F7F9FC;
+    -fx-border-color: #C7D5E5;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.input-container {
+    -fx-background-color: #F7F9FC;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px 10px;
+}
+
+.signin-button {
+    -fx-background-color: #245A91;
+    -fx-background-radius: 7px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.signin-button:hover {
+    -fx-background-color: #194675;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #245A91;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.booking-details-box {
+    -fx-background-color: #F3F7FB;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+}
+
+.detail-label {
+    -fx-text-fill: #526579;
+    -fx-font-size: 13px;
+}
+
+.detail-value {
+    -fx-text-fill: #17365D;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.or-text {
+    -fx-text-fill: #687A8D;
+}
+
+.footer-text {
+    -fx-text-fill: #40566F;
+    -fx-font-size: 11px;
+}
+
+.logo-circle {
+    -fx-background-color: white;
+    -fx-background-radius: 50%;
+    -fx-padding: 12px;
+}
